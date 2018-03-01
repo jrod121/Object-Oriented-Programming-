@@ -1,0 +1,52 @@
+using namespace std;
+#include <iostream>
+
+
+struct PersonalData
+{
+    string name;
+    string surname;
+    int age;
+}a,b;
+void test(PersonalData *);
+int main()
+{
+   // a.age=27; //members declared after struct declaration can be accessed
+   // cout<<a.age<<endl;//prints 27
+    
+    PersonalData Person[5];
+    Person[0].name="Jean";
+    Person[1].name="Jacob";
+    Person[0].surname="Rodriguez";
+    Person[0].age=20;
+    
+  /*  cout<<Person[0].name<<endl;//prints Jean
+    cout<<Person[1].name<<endl;//Prints Jacob
+    cout<<Person[0].surname<<endl;//prints Rodriguez
+    cout<<Person[0].age<<endl;//Prints 20
+    */
+    
+  /*  cout<<(*Person).name<<endl;//Prints Jean
+    cout<<(*(Person+1)).name<<endl;//Prints Jacob
+    cout<<(*&Person[0]).name<<endl;//prints Jean
+    cout<<Person->name<<endl;//prints Jean
+    cout<<(Person+1)->name<<endl;//prints Jacob
+    */
+    
+//PersonalData *p=&Person[0];
+//PersonalData *p=Person;
+//cout<<p->name<<endl;//prints Jean with either declaration
+//cout<<(p+1)->name<<endl;//prints Jacob with either declaration
+
+
+PersonalData *p=Person;
+test(p);//will print Agnes
+test(Person);//will print Agnes
+
+cout<<p->name<<endl;
+}
+void test(PersonalData *Person)
+{
+    Person->name="Agnes";//cannot add endl?????
+    
+}
