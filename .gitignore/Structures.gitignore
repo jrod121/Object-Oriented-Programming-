@@ -1,52 +1,200 @@
 using namespace std;
 #include <iostream>
+#include <string>
 
-
-struct PersonalData
-{
-    string name;
-    string surname;
-    int age;
-}a,b;
-void test(PersonalData *);
-int main()
-{
-   // a.age=27; //members declared after struct declaration can be accessed
-   // cout<<a.age<<endl;//prints 27
     
-    PersonalData Person[5];
-    Person[0].name="Jean";
-    Person[1].name="Jacob";
-    Person[0].surname="Rodriguez";
-    Person[0].age=20;
+   /* string name="Jean Rodriguez";
+    cout<<name<<endl;
+    cout<<&name<<endl;
     
-  /*  cout<<Person[0].name<<endl;//prints Jean
-    cout<<Person[1].name<<endl;//Prints Jacob
-    cout<<Person[0].surname<<endl;//prints Rodriguez
-    cout<<Person[0].age<<endl;//Prints 20
+    string* ptr;
+    ptr=&name;
+    cout<<ptr<<endl;
+    cout<<&ptr<<endl;
+    
+    cout<<*ptr<<endl;
+    *ptr="Scoot Richardson";
+    
+    cout<<*ptr<<endl;
+    cout<<name<<endl;
+    
+    cout<<"|||||||||||||||||||||||||||||||||||||||||"<<endl;
+    
+    string a="Adam Paul";
+    ptr=&a;
+    cout<<a<<endl;
+    cout<<&a<<endl;
+    cout<<ptr<<endl;
+    
     */
     
-  /*  cout<<(*Person).name<<endl;//Prints Jean
-    cout<<(*(Person+1)).name<<endl;//Prints Jacob
-    cout<<(*&Person[0]).name<<endl;//prints Jean
-    cout<<Person->name<<endl;//prints Jean
-    cout<<(Person+1)->name<<endl;//prints Jacob
+    
+   /* string movie="Galaxies of Heroes";
+    string *ptr=&movie;
+    
+    cout<<*ptr<<endl;
+    cout<<movie<<endl;
+    
+    for(unsigned i=0;i<movie.length();i++)
+    {
+        cout<<(*ptr)[i]<<" ";
+    }
+    cout<<endl;
+    
+    for(unsigned i=0;i<(*ptr).length();i++)
+    {
+        cout<<(*ptr)[i]<<" ";
+    }
+    cout<<endl;*/
+    
+    
+  /*  int expensive;
+    int cheap;
+    int *ptr;
+    
+    ptr=&expensive;
+    *ptr=2000;
+    cout<<*ptr<<endl;
+    
+    ptr=&cheap;
+    *ptr=500;
+    cout<<*ptr<<endl;
+    
+    ptr=&expensive;//pointer pointed to expensive with value of 2000
+    cout<<*ptr<<endl;
+    
+    ptr=&cheap;
+    cout<<*ptr<<endl;
     */
     
-//PersonalData *p=&Person[0];
-//PersonalData *p=Person;
-//cout<<p->name<<endl;//prints Jean with either declaration
-//cout<<(p+1)->name<<endl;//prints Jacob with either declaration
-
-
-PersonalData *p=Person;
-test(p);//will print Agnes
-test(Person);//will print Agnes
-
-cout<<p->name<<endl;
-}
-void test(PersonalData *Person)
-{
-    Person->name="Agnes";//cannot add endl?????
+    /*int add(int x)
+    {
+        x=x+10;
+        return x;
+    }
     
-}
+    int main()
+    {
+        int x=50;
+        add(x);//value of x is not changed 
+        cout<<x<<endl;
+    }
+    */
+    
+    
+ /*  int add(int *x)//takes an address and changes the value stored in that address
+    {
+        
+        *x=*x+10;//dereference address of x to its actual value
+        return *x;
+    }
+    
+   int main()
+   {
+       int x=50;
+       add(&x);
+       cout<<x<<endl;
+   }
+   */
+   
+   
+  /* void function(string *name)
+   {
+       
+     
+       name->replace(9,1,"");
+       name->insert(18,"ad");
+       name->replace(15,2,"in");
+       name->replace(23,7,"!");
+       name->replace(4,3,"ali");
+       
+       
+   }
+       
+    int main()
+    {
+        string name="The friends are having dinner";
+        cout<<name<<endl;
+        
+        function(&name);
+        cout<<name<<endl;
+    }
+    
+    */
+    
+    
+   /* int *add(int *x)
+    {
+        (*x)+=50;
+        return x;
+    }
+        
+        
+    int main()
+    {
+        int *math;
+        int x=30;
+        math= add(&x);
+        cout<<*math<<endl;
+    
+    }  */
+    
+    
+    
+   /* string *new()
+    {
+        string *code= new string("ABCDEF");
+        return code;
+    }
+    
+    int main()
+    {
+        string newcode;
+        
+        for(int i=0;i<10;i++)
+        {
+            newcode=*new();
+            cout<<newcode<<endl;
+        }
+    }*/
+    
+    
+  /* void x(int &y)
+   {
+       y=y*2+10;
+   }
+   
+   int main()
+   {
+       int num=30;
+       x(num);
+       cout<<num<<endl;
+   }*/
+   
+   
+   
+  /*  string function(const string *name)
+   {
+       string newstring=*name;
+     
+       newstring.replace(9,1,"");
+       newstring.insert(18,"ad");
+       newstring.replace(15,2,"in");
+       newstring.replace(23,7,"!");
+       newstring.replace(4,3,"ali");
+       return newstring;
+       
+   }
+       
+    int main()
+    {
+        string name="The friends are having dinner";
+        cout<<name<<endl;
+        
+       string newname= function(&name);
+        cout<<name<<endl;
+    }
+    
+   
+   */
+   
